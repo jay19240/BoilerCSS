@@ -1,0 +1,164 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Button
+/*---------------------------------------------------------------------------------------------*/
+
+.Button {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 0;
+  padding: 0.6em 1em;
+  border: 0;
+  border-radius: var(--c-base-border-radius);
+}
+.Button,
+.Button:hover {
+  text-decoration: none;
+}
+.Button:focus {
+  outline: 0;
+}
+.Button-icon {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+/* Modifiers */
+
+.Button--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+.Button--link {
+  background-color: transparent;
+  border-color: transparent;
+}
+.Button--disabled {
+  pointer-events: none;
+  opacity: 0.7;
+  filter: alpha(opacity=70%);
+  @include user-select(none);
+}
+.Button--sm {
+  padding: 0.4em 0.5em;
+}
+.Button--lg {
+  padding: 1.5em 1.5em;
+}
+.Button--xl {
+  padding: 2em 2em;
+}
+.Button--block {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+.Button--alpha {
+  font-size: 3rem;
+}
+.Button--beta {
+  font-size: 2rem;
+}
+.Button--gamma {
+  font-size: 1rem;
+}
+.Button--important {
+  font-weight: bold;
+}
+
+/* Themes */
+
+.Button {
+  background-color: var(--c-button-bg);
+  color: var(--c-button-fg);
+  border-color: var(--c-button-border);
+}
+
+.Button:hover,
+.Button:focus {
+  background-color: var(--c-button-hover-bg);
+  color: var(--c-button-hover-fg);
+  border-color: var(--c-button-hover-border);
+}
+
+@if $COLOR_VARIANTS_ENABLED {
+  .Button--primary {
+    background-color: var(--c-button-primary-bg);
+    color: var(--c-button-primary-fg);
+    border-color: var(--c-button-primary-border);
+  }
+  .Button--primary:hover,
+  .Button--primary:focus {
+    background-color: var(--c-button-primary-hover-bg);
+    color: var(--c-button-primary-hover-fg);
+    border-color: var(--c-button-primary-hover-border);
+  }
+
+  .Button--secondary {
+    background-color: var(--c-button-secondary-bg);
+    color: var(--c-button-secondary-fg);
+    border-color: var(--c-button-secondary-border);
+  }
+  .Button--secondary:hover,
+  .Button--secondary:focus {
+    background-color: var(--c-button-secondary-hover-bg);
+    color: var(--c-button-secondary-hover-fg);
+    border-color: var(--c-button-secondary-hover-border);
+  }
+
+  .Button--success {
+    background-color: var(--c-button-success-bg);
+    color: var(--c-button-success-fg);
+    border-color: var(--c-button-success-border);
+  }
+  .Button--success:hover,
+  .Button--success:focus {
+    background-color: var(--c-button-success-hover-bg);
+    color: var(--c-button-success-hover-fg);
+    border-color: var(--c-button-success-hover-border);
+  }
+
+  .Button--info {
+    background-color: var(--c-button-info-bg);
+    color: var(--c-button-info-fg);
+    border-color: var(--c-button-info-border);
+  }
+  .Button--info:hover,
+  .Button--info:focus {
+    background-color: var(--c-button-info-hover-bg);
+    color: var(--c-button-info-hover-fg);
+    border-color: var(--c-button-info-hover-border);
+  }
+
+  .Button--warning {
+    background-color: var(--c-button-warning-bg);
+    color: var(--c-button-warning-fg);
+    border-color: var(--c-button-warning-border);
+  }
+  .Button--warning:hover,
+  .Button--warning:focus {
+    background-color: var(--c-button-warning-hover-bg);
+    color: var(--c-button-warning-hover-fg);
+    border-color: var(--c-button-warning-hover-border);
+  }
+
+  .Button--danger {
+    background-color: var(--c-button-danger-bg);
+    color: var(--c-button-danger-fg);
+    border-color: var(--c-button-danger-border);
+  }
+  .Button--danger:hover,
+  .Button--danger:focus {
+    background-color: var(--c-button-danger-hover-bg);
+    color: var(--c-button-danger-hover-fg);
+    border-color: var(--c-button-danger-hover-border);
+  }
+}

@@ -1,0 +1,33 @@
+/*---------------------------------------------------------------------------------------------*/
+/* u-state
+/*---------------------------------------------------------------------------------------------*/
+
+.u-state--informative {
+  border-bottom: 1px dotted !important;
+  cursor: help !important;
+}
+
+.u-state--muted {
+  opacity: 0.5 !important;
+  filter: alpha(opacity=50%) !important;
+}
+
+.u-state--discreet {
+  opacity: 0.5 !important;
+  filter: alpha(opacity=50%) !important;
+  @include transition(opacity 5s !important);
+}
+
+.u-state--discreet:hover,
+.u-state--discreet:focus {
+  opacity: 1 !important;
+  filter: alpha(opacity=100%) !important;
+  @include transition(opacity 300ms !important);
+}
+
+.u-state--disabled {
+  pointer-events: none !important;
+  opacity: 0.7 !important;
+  filter: alpha(opacity=70%) !important;
+  @include user-select(none !important);
+}

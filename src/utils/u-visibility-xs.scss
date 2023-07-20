@@ -1,0 +1,14 @@
+@media screen and (max-width: calc(var(--breakpoint-sm) - 1)) {
+  .u-visibility-xs--block {
+    display: block !important;
+  }
+  .u-visibility-xs--inline {
+    display: inline !important;
+  }
+  .u-visibility-xs--inline-block {
+    display: inline-block !important;
+  }
+  .u-visibility-xs--hidden {
+    display: none !important;
+  }
+}

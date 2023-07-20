@@ -1,0 +1,14 @@
+@media screen and (min-width: var(--breakpoint-sm)) {
+  .u-visibility-smup--block {
+    display: block !important;
+  }
+  .u-visibility-smup--inline {
+    display: inline !important;
+  }
+  .u-visibility-smup--inline-block {
+    display: inline-block !important;
+  }
+  .u-visibility-smup--hidden {
+    display: none !important;
+  }
+}

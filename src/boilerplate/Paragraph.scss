@@ -1,0 +1,37 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Paragraph
+/*---------------------------------------------------------------------------------------------*/
+
+.ParagraphLead {
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+
+.ParagraphLettrine::first-letter {
+  float: left;
+  margin: 0.13em 0.05em 0 -0.05em;
+  font-size: 3.333em;
+  line-height: 0.75em;
+}
+
+.ParagraphAlinea::first-letter {
+  margin-left: 2em;
+}
+
+.ParagraphIllustrated figure,
+.ParagraphIllustrated img {
+  float: left;
+  margin: 0.35em 1em 0 0;
+}
+
+.ParagraphIllustrated figure {
+  margin-bottom: 1em;
+}
+
+.ParagraphIllustrated--right figure,
+.ParagraphIllustrated--right img {
+  float: right;
+  margin: 0.35em 0 0 1em;
+}
+
+/* Themes */

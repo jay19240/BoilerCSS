@@ -1,0 +1,23 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Rule
+/*---------------------------------------------------------------------------------------------*/
+
+.Rule {
+  position: relative;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-top: var(--third-spacing-rem);
+  margin-bottom: var(--base-spacing-rem);
+}
+
+/* Modifiers */
+
+.Rule--dotted {
+  border-bottom-style: dotted;
+}
+.Rule--dashed {
+  border-bottom-style: dashed;
+}
+
+/* Themes */

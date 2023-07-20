@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Boilerplate</title>
+  <meta name="description" content="Template boilerplate">
+  <meta name="copyright" content="This document copyright">
+  <link rel="stylesheet" type="text/css" href="../dist/core.css">
+  <link rel="stylesheet" type="text/css" href="../dist/utils.css">
+  <link rel="stylesheet" type="text/css" href="../dist/layout.css">
+  <link rel="stylesheet" type="text/css" href="../dist/boilerplate.css">
+  <link rel="stylesheet" type="text/css" href="css/sample.css">
+</head>
+
+<body>
+  <div class="l-container-fixed">
+    <!-- BodyWrapper -->
+    <div class="BodyWrapper">
+
+      <!-- Banner -->
+      <div class="Banner">
+        <h1 style="text-align:center;">Frame.css</h1>
+        <img src="imgs/banner.png" class="Banner-img"></a>
+      </div>
+      <!-- Banner -->
+
+      <!-- Homepage -->
+      <div class="HomePage">
+        <h2>Mini-guide</h2>
+        <p>Ce framework vous fournis une méthodologie ainsi qu'un ensemble de blocs couraments utilisés pour construire un site-web.
+        </p>
+
+        <h3>Diviser pour mieux règner</h3>
+        <p>
+          Pour garder un code clair et cloisoné votre application doit etre décomposé en plusieurs blocs.
+          Ainsi meme si votre application devient énorme, elle ne sera qu'un ensemble de petits blocs indépendants
+          faciles a gérer.
+        </p>
+        <p>
+          Un bloc est une entité indépendante, une « brique » de l'application ou de la page Web
+        </p>
+        <p>
+          En tant que « brique de construction », un bloc est réutilisable dans d'autres blocs ou dans des éléments.
+          Il ne connait toutefois que son propre contexte et non celui du parent, ce qui implique que la relation
+          entre
+          un composant parent et enfant s'arrête au positionnement, c'est tout.
+          Pour vous aidez à identifier ces briques, voici quelques critères :
+        </p>
+        <ul>
+          <li>C'est un bloc indépendant de son parent.</li>
+          <li>C'est un bloc récurrent.</li>
+        </ul>
+        <p>
+          Vous comprennez que pour cela il faut une idée claire de votre designe général.
+        </p>
+        <p>
+          <i>Nota bene :</i>
+        </p>
+        <p>
+          Il est très important de noter qu'un bloc ne doit <b>jamais</b> servir à créer un autre bloc. (ex :
+          class="Button ClassicButton").<br>
+          Dans ce dernier cas, vous pouvez soit :
+          <ul>
+            <li>Créer un modificateur à partir d'un bloc si sa nature est la meme (sémantique et design) :
+              <b>Button--classic</b></li>
+            <li>Créer un nouveau bloc si sa nature est différente (sémantique et design) : <b>TopNavButton</b></li>
+          </ul>
+          En d'autre termes l'héritage est proscrit par la méthodologie de ce framework.
+        </p>
+
+        <h3>Règle de nommages</h3>
+        <p>
+          Attention à bien respecter la casse.
+        </p>
+        <pre>
+            BlockName
+            BlockName--modifierName
+            BlockName--is-stateOfBlock
+            BlockName-elementName
+            BlockName-BlockChild
+          </pre>
+        <h3>Exemples</h3>
+        <h4>MemberCard</h4>
+        <p>Bloc indépendant et réutiliser à divers endroit</p>
+        <div class="l-row">
+          <div class="l-row-col u-width--1of2">
+            <div class="MemberCard">
+              <h2 class="MemberCard-name">Soseki</h2>
+              <div class="MemberCard-avatar">
+                <img src="https://images.japan-experience.com/guide-japon/1716/s380x516/soseki.jpg">
+              </div>
+              <div class="MemberCard-info">
+                <div class="MemberCard-info-item">
+                  <span class="MemberCard-info-item-title">Profession :</span>
+                  <span class="MemberCard-info-item-value">Poète / Ecrivain</span>
+                </div>
+                <div class="MemberCard-info-item">
+                  <span class="MemberCard-info-item-title">Nationnalité :</span>
+                  <span class="MemberCard-info-item-value">Japonais</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="l-row-col u-width--1of2">
+            <pre>
+          .MemberCard {
+            position: relative;
+            background-color: var(--c-grey-100);
+            color: var(--c-grey-500);
+          }
+          
+          .MemberCard-name {
+            font-weight: bold;
+            font-size: 14px;
+            padding: 5px 10px;
+            margin-bottom: 0;
+            text-align: center;
+          }
+          
+          .MemberCard-avatar {
+            padding: 0 10px 10px 10px;
+            text-align: center;
+          }
+          
+          .MemberCard-avatar img {
+            width: 100%;
+          }
+          
+          .MemberCard-info {
+            padding: 0 10px 5px 10px;
+          }
+          
+          .MemberCard-info-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin: 1px 0px 5px 0px;
+          }
+          
+          .MemberCard-info-item-title {
+            min-width: 100px;
+            font-weight: 600;
+          }
+              </pre>
+          </div>
+        </div>
+
+        <h4>TopNav</h4>
+        <p>Bloc indépendant mais non réutiliser (dans notre cas, présent uniquement dans le header du site).</p>
+        <div class="l-row">
+          <div class="l-row-col u-width--1of2">
+            <div class="TopNav">
+              <div class="TopNav-item"><a href="index.html">Accueil</a></div>
+              <div class="TopNav-item active"><a href="papers.html">Papiers</a></div>
+              <div class="TopNav-item"><a href="members.html">Membres</a></div>
+            </div>
+          </div>
+          <div class="l-row-col u-width--1of2">
+            <pre>
+          .TopNav {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--c-grey-500);
+          }
+          
+          .TopNav-item a {
+            flex: 1;
+            text-decoration: none;
+            color: var(--c-grey-50);
+          }
+          
+          .TopNav-item.active a {
+            color: var(--c-grey-100);
+          }
+          
+          .TopNav-item a:hover {
+            color: var(--c-grey-100);
+          } 
+                </pre>
+          </div>
+        </div>
+
+        <h3>Mise en page</h3>
+        <p>
+          Vous avez le choix entre deux solutions.
+          Si vous voulez une mise en page ultra-flexible vous pouvez créer des composants de présentation (ex:
+          BodyLayout, HeaderLayout, FooterLayout).
+          Si vous voulez une mise en page facile à intégrer vous pouvez utiliser les classes de mise en page intégrées
+          dans
+          le
+          framework.
+        </p>
+
+        <h3>Thèmes</h3>
+        <p>
+          Vous pouvez créer un thème et personnaliser les blocs du framework à partir du fichier template
+          <code>/dist/defaults.theme.css</code>.<br>
+        </p>
+
+        <h2>Alert</h2>
+        <div class="component-sample">
+          <div class="Alert">
+            <span>Ceci est une alerte.</span>
+          </div>
+          <br>
+          <div class="Alert Alert--closable">
+            <a href="#" class="Close Alert-Close" title="close">×</a>
+            <span>Ceci est une alerte.</span>
+          </div>
+        </div>
+
+        <h2>Badge</h2>
+        <div class="component-sample">
+          <div class="Badge">2</div>
+          <div class="Badge Badge--primary">2</div>
+        </div>
+
+        <h2>Button</h2>
+        <div class="component-sample">
+          <p>
+            <button class="Button">Button</button>
+            <button class="Button">Button &amp; icon<i class="Button-icon fa fa-caret-down"></i></button>
+          </p>
+          <p>
+            <button class="Button Button--disabled">Button--disabled</button>
+            <button class="Button Button--important">Button--important</button>
+          </p>
+          <p>
+            <button class="Button Button--link">Button--link</button>
+          </p>
+          <p>
+            <button class="Button Button--gamma">Button--gamma</button>
+            <button class="Button Button--beta">Button--beta</button>
+            <button class="Button Button--alpha">Button--alpha</button>
+          </p>
+          <p>
+            <button class="Button Button--sm">Button--sm</button>
+            <button class="Button">Button</button>
+            <button class="Button Button--lg">Button--lg</button>
+            <button class="Button Button--xl">Button--xl</button>
+          </p>
+          <p>
+            <button class="Button button--block">button--block</button>
+          </p>
+        </div>
+
+        <h2>Dialog</h2>
+        <div class="component-sample" style="position:relative; height:200px">
+          <div class="Dialog Dialog--closable">
+            <div class="Dialog-header">
+              <span class="Dialog-header-title">dialog-title</span>
+              <span class="Close Dialog-header-Close">×</span>
+            </div>
+            <div class="Dialog-body">
+              <div class="Dialog-scrollable" style="max-height:60px">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt
+                mollit anim id est laborum."
+              </div>
+            </div>
+            <div class="Dialog-footer">
+              <button class="Button">button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Dropdown</h2>
+      <div class="component-sample" style="position:relative; height:200px">
+        <div class="Dropdown">
+          <a href="#">Dropdown</a>
+          <div class="Dropdown-menu">
+            <ul class="Dropdown-menu-list">
+              <li class="Dropdown-menu-list-item"><a>lien 1</a></li>
+              <li class="Dropdown-menu-list-item"><a>lien 2</a></li>
+              <li class="Dropdown-menu-list-separator"></li>
+              <li class="Dropdown-menu-list-item"><a>lien 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2>Form</h2>
+      <div class="component-sample">
+        <form class="Form">
+          <div class="FormField">
+            <label class="FormField-label">Numéro identification</label>
+            <input class="FormCtrl">
+          </div>
+          <div class="FormField">
+            <label class="FormField-label">Numéro identification</label>
+            <input class="FormCtrl">
+          </div>
+          <div class="FormField">
+            <label class="FormField-label">Numéro identification</label>
+            <input class="FormCtrl">
+          </div>
+          <div class="FormField">
+            <div class="l-row">
+              <div class="l-row-col u-width--1of4">
+                <label class="FormField-label">champs 1</label>
+                <input class="formCtrl">
+              </div>
+              <div class="l-row-col u-width--1of4">
+                <label class="FormField-label">champs 2</label>
+                <input class="formCtrl">
+              </div>
+              <div class="l-row-col u-width--1of4">
+                <label class="FormField-label">champs 3</label>
+                <input class="formCtrl">
+              </div>
+              <div class="l-row-col u-width--1of4">
+                <label class="FormField-label">champs 4</label>
+                <input class="formCtrl">
+              </div>
+            </div>
+          </div>
+        </form>
+        <br>
+        <h4>Form--inline</h4>
+        <form class="Form Form--inline">
+          <div class="FormField">
+            <label class="FormField-label">Numéro identification</label>
+            <input class="FormCtrl" size="2">
+          </div>
+          <div class="FormField">
+            <label class="FormField-label">Numéro identification</label>
+            <input class="FormCtrl" size="2">
+          </div>
+          <div class="FormField">
+            <label class="FormField-label">Numéro identification</label>
+            <input class="FormCtrl" size="2">
+          </div>
+        </form>
+        <br>
+        <form class="Form Form--inline">
+          <div class="Form-group u-width--1of3">
+            <label class="FormField-label">Numéro identification</label>
+            <input class="FormCtrl">
+          </div>
+          <div class="Form-group u-width--1of3">
+            <label class="FormField-label">Numéro identification</label>
+            <input class="FormCtrl">
+          </div>
+          <div class="Form-group u-width--1of3">
+            <label class="FormField-label">Numéro identification</label>
+            <input class="FormCtrl">
+          </div>
+        </form>
+        <br>
+        <h4>Form & layout</h4>
+        <form class="Form">
+          <div class="FormField l-row">
+            <div class="l-row-col u-width--2of6">
+              <label class="FormField-label">Numéro identification :</label>
+            </div>
+            <div class="l-row-col u-width--4of6">
+              <input class="FormCtrl">
+            </div>
+            <div class="l-row-col u-width--2of6">
+              <label class="FormField-label">Mot de passe :</label>
+            </div>
+            <div class="l-row-col u-width--4of6">
+              <input class="FormCtrl">
+            </div>
+          </div>
+          <div class="FormField l-row">
+            <div class="l-row-col u-width--2of6">
+              <label class="FormField-label">Service souhaitez : </label>
+            </div>
+            <div class="l-row-col u-width--4of6">
+              <input class="FormCtrl">
+            </div>
+          </div>
+        </form>
+        <h4>FormAddon</h4>
+        <!-- appending -->
+        <div class="FormAddon">
+          <input class="FormAddon-field FormCtrl">
+          <button class="Button FormAddon-item">…</button>
+        </div>
+        <div class="FormAddon">
+          <span class="FormAddon-item">Give</span>
+          <input class="FormAddon-field FormCtrl">
+        </div>
+
+        <h2>Heading</h2>
+        <div class="component-sample">
+          <p class="heading--1">heading--1</p>
+          <p class="heading--2">heading--2</p>
+          <p class="heading--3">heading--3</p>
+          <p class="heading--4">heading--4</p>
+          <p class="heading--5">heading--5</p>
+          <p class="heading--6">heading--6</p>
+        </div>
+
+        <h2>Label</h2>
+        <div class="component-sample">
+          <span class="Label">label 0</span>
+          <span class="Label">label 1</span>
+          <span class="Label">label 2</span>
+          <span class="Label">label 3</span>
+          <span class="Label">label 4</span>
+        </div>
+
+        <h2>Link</h2>
+        <div class="component-sample">
+          <p>
+            <a href="#">Un lien classique !</a>
+          </p>
+          <p>
+            <a hreflang="en" href="#">Un lien qui pointe vers une page !</a>
+          </p>
+          <p>
+            <a data-extension="PDF" href="#">Un lien qui pointe vers un document !</a>
+          </p>
+          <h4>Link</h4>
+          <p>
+            <a href="#" class="Link">
+              <strong class="Link-target">Connectez-vous</strong> à votre compte.
+            </a>
+          </p>
+          <p>
+            <a href="#" class="Link glyph--anchor">
+              <span class="Link-target">Ceci est un permalink</span>
+            </a>
+          </p>
+        </div>
+
+        <h2>Paragraph</h2>
+        <div class="component-sample">
+          <p>
+            Omitto iuris dictionem in libera civitate contra leges senatusque consulta; caedes relinquo; libidines
+            praetereo, quarum acerbissimum extat indicium et ad insignem memoriam turpitudinis et paene ad iustum
+            odium imperii nostri, quod constat nobilissimas virgines se in puteos abiecisse et morte voluntaria
+            necessariam turpitudinem depulisse. Nec haec idcirco omitto, quod non gravissima sint, sed quia nunc sine
+            teste dico.
+          </p>
+          <h4>ParagraphLead</h4>
+          <p class="ParagraphLead">
+            Omitto iuris dictionem in libera civitate contra leges senatusque consulta; caedes relinquo; libidines
+            praetereo, quarum acerbissimum extat indicium et ad insignem memoriam turpitudinis et paene ad iustum
+            odium imperii nostri, quod constat nobilissimas virgines se in puteos abiecisse et morte voluntaria
+            necessariam turpitudinem depulisse. Nec haec idcirco omitto, quod non gravissima sint, sed quia nunc sine
+            teste dico.
+          </p>
+          <h4>ParagraphLettrine</h4>
+          <p class="ParagraphLettrine">
+            Omitto iuris dictionem in libera civitate contra leges senatusque consulta; caedes relinquo; libidines
+            praetereo, quarum acerbissimum extat indicium et ad insignem memoriam turpitudinis et paene ad iustum
+            odium imperii nostri, quod constat nobilissimas virgines se in puteos abiecisse et morte voluntaria
+            necessariam turpitudinem depulisse. Nec haec idcirco omitto, quod non gravissima sint, sed quia nunc sine
+            teste dico.
+          </p>
+          <h4>ParagraphAlinea</h4>
+          <p class="ParagraphAlinea">
+            Omitto iuris dictionem in libera civitate contra leges senatusque consulta; caedes relinquo; libidines
+            praetereo, quarum acerbissimum extat indicium et ad insignem memoriam turpitudinis et paene ad iustum
+            odium imperii nostri, quod constat nobilissimas virgines se in puteos abiecisse et morte voluntaria
+            necessariam turpitudinem depulisse. Nec haec idcirco omitto, quod non gravissima sint, sed quia nunc sine
+            teste dico.
+          </p>
+          <h4>ParagraphIllustrated</h4>
+          <p class="ParagraphIllustrated">
+            <img src="https://images.japan-experience.com/guide-japon/1716/s380x516/soseki.jpg" height="106px">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac tincidunt nisi. In hac habitasse platea
+            dictumst. Aliquam nec nulla elementum, euismod arcu non, commodo est. Etiam bibendum, dui ullamcorper
+            finibus dignissim, nisl ex venenatis nibh, sed hendrerit erat enim sit amet nulla. Duis condimentum sit
+            amet ligula sit amet tristique. Aliquam cursus ante nec porttitor efficitur. Nullam eleifend, erat a
+            consequat iaculis, libero enim tincidunt magna, sed suscipit turpis leo vitae massa. Donec efficitur, nibh
+            vel laoreet vulputate, nibh nisl iaculis nibh, id consectetur justo tellus in odio. Nunc ac ligula
+            hendrerit, gravida nisi eu, pellentesque tortor. Mauris nec enim vitae urna commodo commodo id quis nisi.
+          </p>
+          <h4>ParagraphIllustrated (avec article)</h4>
+          <article class="ParagraphIllustrated">
+            <figure style="width:200px">
+              <a href="#"><img src="https://images.japan-experience.com/guide-japon/1716/s380x516/soseki.jpg"></a>
+              <figcaption><cite>Sōseki Natsume en 1892.</cite></figcaption>
+            </figure>
+            <p class="ParagraphLettrine">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac tincidunt nisi. In hac habitasse
+              platea dictumst. Aliquam nec nulla elementum, euismod arcu non, commodo est. Etiam bibendum, dui
+              ullamcorper finibus dignissim, nisl ex venenatis nibh, sed hendrerit erat enim sit amet nulla. Duis
+              condimentum sit amet ligula sit amet tristique. Aliquam cursus ante nec porttitor efficitur. Nullam
+              eleifend, erat a consequat iaculis, libero enim tincidunt magna, sed suscipit turpis leo vitae massa.
+              Donec efficitur, nibh vel laoreet vulputate, nibh nisl iaculis nibh, id consectetur justo tellus in
+              odio. Nunc ac ligula hendrerit, gravida nisi eu, pellentesque tortor. Mauris nec enim vitae urna commodo
+              commodo id quis nisi.
+            </p>
+            <p>
+              Nam facilisis nibh et dictum convallis. Cras a ex ac quam scelerisque vulputate. Maecenas accumsan
+              bibendum ligula, eget varius augue porttitor eget. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Aliquam posuere magna vitae gravida porttitor. Etiam varius diam tristique nisi venenatis, id
+              commodo massa ultricies. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique
+              senectus et netus et malesuada fames ac turpis egestas. Aenean at arcu lorem. Sed at arcu sapien.
+              Praesent vehicula neque ac elit facilisis lacinia. Duis volutpat sit amet est ut fermentum. Ut convallis
+              feugiat dictum. Ut blandit justo massa, ut pharetra eros pulvinar vel. In fringilla, massa condimentum
+              porttitor fermentum, magna sem bibendum eros, in tristique ex est quis ipsum. Nulla viverra dapibus est
+              sit amet mattis.
+            </p>
+            <p>
+              Phasellus pulvinar quam vitae justo semper, eget auctor justo ornare. Aenean ullamcorper posuere arcu,
+              vel consectetur sapien aliquet vitae. Praesent hendrerit eleifend sagittis. Phasellus condimentum in
+              lacus a finibus. Nulla viverra est id eros tempor, in aliquam risus mattis. Aliquam vel nunc
+              condimentum, pretium lectus non, faucibus justo. Nunc et efficitur odio. Integer fermentum libero quis
+              ante sodales, nec cursus diam mollis. Pellentesque faucibus eget purus rhoncus tristique.
+            </p>
+          </article>
+          <h4>ParagraphIllustrated--right (avec article)</h4>
+          <article class="ParagraphIllustrated--right">
+            <figure style="width:200px">
+              <a href="#"><img src="https://images.japan-experience.com/guide-japon/1716/s380x516/soseki.jpg"></a>
+              <figcaption><cite>Sōseki Natsume en 1892.</cite></figcaption>
+            </figure>
+            <p class="ParagraphLettrine">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac tincidunt nisi. In hac habitasse
+              platea dictumst. Aliquam nec nulla elementum, euismod arcu non, commodo est. Etiam bibendum, dui
+              ullamcorper finibus dignissim, nisl ex venenatis nibh, sed hendrerit erat enim sit amet nulla. Duis
+              condimentum sit amet ligula sit amet tristique. Aliquam cursus ante nec porttitor efficitur. Nullam
+              eleifend, erat a consequat iaculis, libero enim tincidunt magna, sed suscipit turpis leo vitae massa.
+              Donec efficitur, nibh vel laoreet vulputate, nibh nisl iaculis nibh, id consectetur justo tellus in
+              odio. Nunc ac ligula hendrerit, gravida nisi eu, pellentesque tortor. Mauris nec enim vitae urna commodo
+              commodo id quis nisi.
+            </p>
+            <p>
+              Nam facilisis nibh et dictum convallis. Cras a ex ac quam scelerisque vulputate. Maecenas accumsan
+              bibendum ligula, eget varius augue porttitor eget. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Aliquam posuere magna vitae gravida porttitor. Etiam varius diam tristique nisi venenatis, id
+              commodo massa ultricies. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique
+              senectus et netus et malesuada fames ac turpis egestas. Aenean at arcu lorem. Sed at arcu sapien.
+              Praesent vehicula neque ac elit facilisis lacinia. Duis volutpat sit amet est ut fermentum. Ut convallis
+              feugiat dictum. Ut blandit justo massa, ut pharetra eros pulvinar vel. In fringilla, massa condimentum
+              porttitor fermentum, magna sem bibendum eros, in tristique ex est quis ipsum. Nulla viverra dapibus est
+              sit amet mattis.
+            </p>
+            <p>
+              Phasellus pulvinar quam vitae justo semper, eget auctor justo ornare. Aenean ullamcorper posuere arcu,
+              vel consectetur sapien aliquet vitae. Praesent hendrerit eleifend sagittis. Phasellus condimentum in
+              lacus a finibus. Nulla viverra est id eros tempor, in aliquam risus mattis. Aliquam vel nunc
+              condimentum, pretium lectus non, faucibus justo. Nunc et efficitur odio. Integer fermentum libero quis
+              ante sodales, nec cursus diam mollis. Pellentesque faucibus eget purus rhoncus tristique.
+            </p>
+          </article>
+        </div>
+
+        <h2>Rule</h2>
+        <div class="component-sample">
+          <hr class="rule">
+          <h4>rule--dotted</h4>
+          <hr class="rule rule--dotted">
+          <h4>rule--dashed</h4>
+          <hr class="rule rule--dashed">
+        </div>
+
+        <h2>Table</h2>
+        <div class="component-sample">
+          <table class="Table">
+            <thead>
+              <tr>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+                <th>Dolor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4>Table--bordered</h4>
+          <table class="Table Table--bordered">
+            <thead>
+              <tr>
+                <th colspan="3">Foo</th>
+                <th>Bar</th>
+              </tr>
+              <tr>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+                <th class="numerical">Dolor</th>
+                <th>Sit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="3">Sit</th>
+                <td>Dolor</td>
+                <td class="numerical">03.788</td>
+                <td>Lorem</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td class="numerical">32.210</td>
+                <td>Lorem</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td class="numerical">47.797</td>
+                <td class="table-active">Lorem</td>
+              </tr>
+              <tr class="table-active">
+                <th rowspan="2">Sit</th>
+                <td>Dolor</td>
+                <td class="numerical">09.640</td>
+                <td>Lorem</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td class="numerical">12.117</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <h4>Table--striped</h4>
+          <table class="Table Table--striped">
+            <thead>
+              <tr>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+                <th>Dolor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4>Table--hover</h4>
+          <table class="Table Table--hover">
+            <thead>
+              <tr>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+                <th>Dolor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4>Table--data</h4>
+          <table class="Table Table--data">
+            <thead>
+              <tr>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+                <th>Dolor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4>Table--fixed</h4>
+          <table class="Table Table--fixed">
+            <thead>
+              <tr>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+                <th>Dolor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                </td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Dolor</td>
+                <td>Lorem</td>
+                <td>Ipsum</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Toast</h2>
+        <div class="component-sample" style="position:relative; height:80px">
+          <div class="Toast Toast--open" style="position:absolute;">
+            <span>Juste un message furtif...</span>
+          </div>
+        </div>
+
+        <h2>Tooltip</h2>
+        <div class="component-sample" style="height:300px">
+          <figure style="width:200px">
+            <a href="#" class="Tooltipped Tooltipped--bottom" aria-label="M. Soseki" style="display:block;">
+              <img src="https://images.japan-experience.com/guide-japon/1716/s380x516/soseki.jpg">
+            </a>
+          </figure>
+        </div>
+
+        <h2>Layout</h2>
+        <div class="component-sample">
+          <div class="l-row">
+            <div class="l-row-col u-width--1of2">
+              <div class="DefaultsDemo">
+                <span>a-width--1of2</span>
+              </div>
+            </div>
+            <div class="l-row-col u-width--1of2">
+              <div class="DefaultsDemo">
+                <span>a-width--1of2</span>
+              </div>
+            </div>
+          </div>
+          <h4>with gutter</h4>
+          <div class="l-row l-row--gutter">
+            <div class="l-row-col u-width--1of2">
+              <div class="DefaultsDemo">
+                <span>a-width--1of2</span>
+              </div>
+            </div>
+            <div class="l-row-col u-width--1of2">
+              <div class="DefaultsDemo">
+                <span>a-width--1of2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Homepage -->
+
+      <!-- Footer -->
+      <div class="Footer">
+        <div class="Footer-copyright">
+          <em>This site Copyright © 2018-2019 GL19.</em><br>
+        </div>
+      </div>
+      <!-- Footer -->
+
+    </div>
+    <!-- BodyWrapper -->
+  </div>
+</body>
+
+</html>

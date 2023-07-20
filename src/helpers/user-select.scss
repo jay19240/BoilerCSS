@@ -1,0 +1,10 @@
+/*---------------------------------------------------------------------------------------------*/
+/* user-select
+/*---------------------------------------------------------------------------------------------*/
+
+@mixin user-select($select-mode: none) {
+  -webkit-user-select: $select-mode;
+  -moz-user-select: $select-mode;
+  -ms-user-select: $select-mode;
+  user-select: $select-mode;
+}

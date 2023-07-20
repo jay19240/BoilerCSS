@@ -1,0 +1,256 @@
+/*---------------------------------------------------------------------------------------------*/
+/* frame.css theme overrides template
+/*---------------------------------------------------------------------------------------------*/
+
+:root {
+  --c-base-bg: #ddd;
+  --c-base-fg: #000;
+  --c-primary-bg: #ee0979;
+  --c-primary-fg: #fff;
+  --c-secondary-bg: #364e61;
+  --c-secondary-fg: #fff;
+  --c-success-bg: #28a745;
+  --c-success-fg: #fff;
+  --c-info-bg: #17a2b8;
+  --c-info-fg: #fff;
+  --c-warning-bg: #ffc107;
+  --c-warning-fg: #fff;
+  --c-danger-bg: #dc3545;
+  --c-danger-fg: #fff;
+
+  --c-yellow-200: #fff59d;
+  --c-yellow-300: #fff176;
+  --c-yellow-400: #ffee58;
+  --c-yellow-500: #ffeb3b;
+  --c-yellow-600: #fdd835;
+
+  --c-blue-200: #90caf9;
+  --c-blue-300: #64b5f6;
+  --c-blue-400: #42a5f5;
+  --c-blue-500: #2196f3;
+  --c-blue-600: #1e88e5;
+
+  --c-red-200: #ef9a9a;
+  --c-red-300: #e57373;
+  --c-red-400: #ef5350;
+  --c-red-500: #f44336;
+  --c-red-600: #e53935;
+
+  --c-purple-200: #ce93d8;
+  --c-purple-300: #ba68c8;
+  --c-purple-400: #ab47bc;
+  --c-purple-500: #9c27b0;
+  --c-purple-600: #8e24aa;
+
+  --c-green-200: #a5d6a7;
+  --c-green-300: #81c784;
+  --c-green-400: #66bb6a;
+  --c-green-500: #4caf50;
+  --c-green-600: #43a047;
+
+  --c-pink-200: #f48fb1;
+  --c-pink-300: #f06292;
+  --c-pink-400: #ec407a;
+  --c-pink-500: #e91e63;
+  --c-pink-600: #d81b60;
+
+  --c-cyan-200: #80deea;
+  --c-cyan-300: #4dd0e1;
+  --c-cyan-400: #26c6da;
+  --c-cyan-500: #00bcd4;
+  --c-cyan-600: #00acc1;
+
+  --c-orange-200: #ffcc80;
+  --c-orange-300: #ffb74d;
+  --c-orange-400: #ffa726;
+  --c-orange-500: #ff9800;
+  --c-orange-600: #fb8c00;
+
+  --c-grey-50: #f8f9fa;
+  --c-grey-100: #dbdbdd;
+  --c-grey-200: #a19fa0;
+  --c-grey-300: #666666;
+  --c-grey-400: #3c3c3c;
+  --c-grey-500: #363636;
+  --c-grey-600: #0c0c0c;
+
+  --c-alert-bg: #ddd;
+  --c-alert-fg: #000;
+  --c-alert-primary-bg: ;
+  --c-alert-primary-fg: ;
+  --c-alert-secondary-bg: ;
+  --c-alert-secondary-fg: ;
+  --c-alert-success-bg: ;
+  --c-alert-success-fg: ;
+  --c-alert-info-bg: ;
+  --c-alert-info-fg: ;
+  --c-alert-warning-bg: ;
+  --c-alert-warning-fg: ;
+  --c-alert-danger-bg: ;
+  --c-alert-danger-fg: ;
+
+  --c-badge-bg: #ddd;
+  --c-badge-fg: #000;
+  --c-badge-primary-bg: ;
+  --c-badge-primary-fg: ;
+  --c-badge-secondary-bg: ;
+  --c-badge-secondary-fg: ;
+
+  --c-button-bg: #ddd;
+  --c-button-fg: #000;
+  --c-button-border: #000;
+  --c-button-hover-bg: #ddd;
+  --c-button-hover-fg: #000;
+  --c-button-hover-border: #ddd;
+  --c-button-primary-bg: ;
+  --c-button-primary-fg: ;
+  --c-button-primary-border: ;
+  --c-button-primary-hover-bg: ;
+  --c-button-primary-hover-fg: ;
+  --c-button-primary-hover-border: ;
+  --c-button-secondary-bg: ;
+  --c-button-secondary-fg: ;
+  --c-button-secondary-border: ;
+  --c-button-secondary-hover-bg: ;
+  --c-button-secondary-hover-fg: ;
+  --c-button-secondary-hover-border: ;
+  --c-button-success-bg: ;
+  --c-button-success-fg: ;
+  --c-button-success-border: ;
+  --c-button-success-hover-bg: ;
+  --c-button-success-hover-fg: ;
+  --c-button-success-hover-border: ;
+  --c-button-info-bg: ;
+  --c-button-info-fg: ;
+  --c-button-info-border: ;
+  --c-button-info-hover-bg: ;
+  --c-button-info-hover-fg: ;
+  --c-button-info-hover-border: ;
+  --c-button-warning-bg: ;
+  --c-button-warning-fg: ;
+  --c-button-warning-border: ;
+  --c-button-warning-hover-bg: ;
+  --c-button-warning-hover-fg: ;
+  --c-button-warning-hover-border: ;
+  --c-button-danger-bg: ;
+  --c-button-danger-fg: ;
+  --c-button-danger-border: ;
+  --c-button-danger-hover-bg: ;
+  --c-button-danger-hover-fg: ;
+  --c-button-danger-hover-border: ;
+
+  --c-dialog-bg: ;
+  --c-dialog-fg: ;
+  --c-dialog-border: ;
+  --c-dialog-header-bg: red;
+  --c-dialog-header-fg: #fff;
+  --c-dialog-success-bg: ;
+  --c-dialog-success-fg: ;
+  --c-dialog-success-border: ;
+  --c-dialog-success-header-bg: red;
+  --c-dialog-success-header-fg: #fff;
+  --c-dialog-info-bg: ;
+  --c-dialog-info-fg: ;
+  --c-dialog-info-border: ;
+  --c-dialog-info-header-bg: red;
+  --c-dialog-info-header-fg: #fff;
+  --c-dialog-warning-bg: ;
+  --c-dialog-warning-fg: ;
+  --c-dialog-warning-border: ;
+  --c-dialog-warning-header-bg: red;
+  --c-dialog-warning-header-fg: #fff;
+  --c-dialog-danger-bg: ;
+  --c-dialog-danger-fg: ;
+  --c-dialog-danger-border: ;
+  --c-dialog-danger-header-bg: red;
+  --c-dialog-danger-header-fg: #fff;
+
+  --c-dropdown-bg: #fff;
+  --c-dropdown-fg: #000;
+  --c-dropdown-border: #000;
+  --c-dropdown-item-hover-bg: #000;
+  --c-dropdown-item-hover-fg: #fff;
+  --c-dropdown-separator: #000;
+
+  --c-form-group-ctrl-border-radius: ;
+  --c-form-group-ctrl-bg: yellow;
+  --c-form-group-ctrl-fg: ;
+  --c-form-group-ctrl-border: red;
+  --c-form-group-ctrl-focus-bg: ;
+  --c-form-group-ctrl-focus-fg: ;
+  --c-form-group-ctrl-focus-border: ;
+
+  --c-form-group-ctrl-success-bg: ;
+  --c-form-group-ctrl-success-fg: ;
+  --c-form-group-ctrl-success-border: ;
+  --c-form-group-ctrl-success-focus-bg: ;
+  --c-form-group-ctrl-success-focus-fg: ;
+  --c-form-group-ctrl-success-focus-border: ;
+
+  --c-form-group-ctrl-warning-bg: ;
+  --c-form-group-ctrl-warning-fg: ;
+  --c-form-group-ctrl-warning-border: ;
+  --c-form-group-ctrl-warning-focus-bg: ;
+  --c-form-group-ctrl-warning-focus-fg: ;
+  --c-form-group-ctrl-warning-focus-border: ;
+
+  --c-form-group-ctrl-danger-bg: ;
+  --c-form-group-ctrl-danger-fg: ;
+  --c-form-group-ctrl-danger-border: ;
+  --c-form-group-ctrl-danger-focus-bg: ;
+  --c-form-group-ctrl-danger-focus-fg: ;
+  --c-form-group-ctrl-danger-focus-border: ;
+
+  --c-form-group-addon-bg: ;
+  --c-form-group-addon-fg: ;
+
+  --c-heading-bg: transparent;
+  --c-heading-fg: #000;
+
+  --c-label-bg: ;
+  --c-label-fg: ;
+  --c-label-primary-bg: ;
+  --c-label-primary-fg: ;
+  --c-label-secondary-bg: ;
+  --c-label-secondary-fg: ;
+  --c-label-success-bg: ;
+  --c-label-success-fg: ;
+  --c-label-info-bg: ;
+  --c-label-info-fg: ;
+  --c-label-warning-bg: ;
+  --c-label-warning-fg: ;
+  --c-label-danger-bg: ;
+  --c-label-danger-fg: ;
+
+  --c-table-bg: ;
+  --c-table-fg: ;
+  --c-table-hover-bg: ;
+  --c-table-hover-fg: ;
+  --c-table-striped-odd-bg: ;
+  --c-table-striped-odd-fg: ;
+
+  --c-toast-bg: ;
+  --c-toast-fg: ;
+
+  --c-tooltip-bg: ;
+  --c-tooltip-fg: ;
+
+  --heading-1-size: 2.25rem;
+  --heading-1-line-height: 1.33333;
+
+  --heading-2-size: 1.875rem;
+  --heading-2-line-height: 1.6;
+
+  --heading-3-size: 1.5rem;
+  --heading-3-line-height: 1;
+
+  --heading-4-size: 1.25rem;
+  --heading-4-line-height: 1.2;
+
+  --heading-5-size: 1rem;
+  --heading-5-line-height: 1.5;
+
+  --heading-6-size: 0.875rem;
+  --heading-6-line-height: 1.71429;
+}
+

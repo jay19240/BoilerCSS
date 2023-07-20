@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+body {
+  color: var(--c-page-fg);
+  background-color: var(--c-page-bg);
+  background-image: url("../imgs/wall.jpg");
+  padding-top: 10px;
+  font: 1em/1.5 sans-serif;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* BodyWrapper
+/*---------------------------------------------------------------------------------------------*/
+
+.BodyWrapper {
+  padding: 20px;
+  padding-bottom: 0;
+  background-color: #fff;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* Banner
+/*---------------------------------------------------------------------------------------------*/
+
+.Banner {
+  margin-bottom: 20px;
+}
+
+.Banner-img {
+  width: 100%;
+}
+
+.component-sample {
+  margin-bottom: 20px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* DefaultsDemo
+/*---------------------------------------------------------------------------------------------*/
+
+.DefaultsDemo {
+  display: block;
+  background-color: #ACE;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* MemberCard
+/*---------------------------------------------------------------------------------------------*/
+
+.MemberCard {
+  position: relative;
+  min-width: 200px;
+  background-color: var(--c-grey-100);
+  color: var(--c-grey-500);
+}
+
+.MemberCard-name {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.MemberCard-avatar {
+  padding: 0 10px 10px 10px;
+  text-align: center;
+}
+
+.MemberCard-avatar img {
+  width: 100%;
+}
+
+.MemberCard-info {
+  padding: 0 10px 5px 10px;
+}
+
+.MemberCard-info-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 1px 0px 5px 0px;
+}
+
+.MemberCard-info-item-title {
+  min-width: 100px;
+  font-weight: 600;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* TopNav
+/*---------------------------------------------------------------------------------------------*/
+
+.TopNav {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--c-grey-500);
+}
+
+.TopNav-item a {
+  flex: 1;
+  text-decoration: none;
+  color: var(--c-grey-50);
+}
+
+.TopNav-item.active a {
+  color: var(--c-grey-100);
+}
+
+.TopNav-item a:hover {
+  color: var(--c-grey-100);
+}

@@ -1,0 +1,23 @@
+/*---------------------------------------------------------------------------------------------*/
+/* u-visibility
+/*---------------------------------------------------------------------------------------------*/
+
+[class*="u-visibility"] {
+  display: none !important;
+}
+
+.u-visibility--block {
+  display: block !important;
+}
+
+.u-visibility--inline {
+  display: inline !important;
+}
+
+.u-visibility--inline-block {
+  display: inline-block !important;
+}
+
+.u-visibility--hidden {
+  display: none !important;
+}

@@ -1,0 +1,17 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Link
+/*---------------------------------------------------------------------------------------------*/
+
+.Link,
+.Link:hover,
+.Link:active,
+.Link:focus {
+  text-decoration: none;
+}
+.Link:hover .Link-target,
+.Link:active .Link-target,
+.Link:focus .Link-target {
+  text-decoration: underline;
+}
+
+/* Themes */

@@ -1,0 +1,88 @@
+/*---------------------------------------------------------------------------------------------*/
+/* FormCtrl
+/*---------------------------------------------------------------------------------------------*/
+
+.FormCtrl {
+  display: block;
+  min-width: 10px;
+}
+
+/* Modifiers */
+
+.FormCtrl--disabled,
+.FormCtrl:disabled {
+  pointer-events: none;
+  opacity: 0.7;
+  filter: alpha(opacity=70%);
+  @include user-select(none);
+}
+.FormCtrl--xs {
+  width: 50px;
+}
+.FormCtrl--sm {
+  width: 130px;
+}
+.FormCtrl--md {
+  width: 200px;
+}
+.FormCtrl--lg {
+  width: 500px;
+}
+.FormCtrl--block {
+  display: block;
+  width: 100%;
+}
+.FormCtrl--alpha {
+  font-size: 20px;
+}
+.FormCtrl--beta {
+  font-size: 12px;
+}
+
+/* Themes */
+
+.FormCtrl {
+  background-color: var(--c-form-ctrl-bg);
+  color: var(--c-form-ctrl-fg);
+  border-color: var(--c-form-ctrl-border);
+}
+.FormCtrl:focus {
+  background-color: var(--c-form-ctrl-focus-bg);
+  color: var(--c-form-ctrl-focus-fg);
+  border-color: var(--c-form-ctrl-focus-border);
+}
+
+@if $COLOR_VARIANTS_ENABLED {
+  .FormCtrl--success {
+    background-color: var(--c-form-ctrl-success-bg);
+    color: var(--c-form-ctrl-success-fg);
+    border-color: var(--c-form-ctrl-success-border);
+  }
+  .FormCtrl--success:focus {
+    background-color: var(--c-form-ctrl-success-focus-bg);
+    color: var(--c-form-ctrl-success-focus-fg);
+    border-color: var(--c-form-ctrl-success-focus-border);
+  }
+
+  .FormCtrl--warning {
+    background-color: var(--c-form-ctrl-warning-bg);
+    color: var(--c-form-ctrl-warning-fg);
+    border-color: var(--c-form-ctrl-warning-border);
+  }
+  .FormCtrl--warning:focus {
+    background-color: var(--c-form-ctrl-warning-focus-bg);
+    color: var(--c-form-ctrl-warning-focus-fg);
+    border-color: var(--c-form-ctrl-warning-focus-border);
+  }
+
+  .FormCtrl--danger {
+    background-color: var(--c-form-ctrl-danger-bg);
+    color: var(--c-form-ctrl-danger-fg);
+    border-color: var(--c-form-ctrl-danger-border);
+  }
+  .FormCtrl--danger:focus {
+    background-color: var(--c-form-ctrl-danger-focus-bg);
+    color: var(--c-form-ctrl-danger-focus-fg);
+    border-color: var(--c-form-ctrl-danger-focus-border);
+  }
+}

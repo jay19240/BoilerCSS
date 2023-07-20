@@ -1,0 +1,70 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Tooltip
+/*---------------------------------------------------------------------------------------------*/
+
+.Tooltipped {
+  position: relative;
+}
+
+.Tooltipped:after {
+  position: absolute;
+  border-radius: var(--base-border-radius);
+  content: attr(aria-label);
+  font: normal normal 11px/1.5 -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  letter-spacing: normal;
+  opacity: 0;
+  padding: 0.5em 0.75em;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: pre;
+  word-wrap: break-word;
+  z-index: 1000000;
+  -webkit-font-smoothing: subpixel-antialiased;
+  @include transition(opacity 0.3s);
+}
+
+.Tooltipped:active:after,
+.Tooltipped:focus:after,
+.Tooltipped:hover:after {
+  display: inline-block;
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* Modifiers */
+
+.Tooltipped--bottom:after {
+  left: 50%;
+  bottom: 0;
+  @include transform(translateY(50%) translateY(10px) translateX(-50%));
+}
+
+.Tooltipped--top:after {
+  left: 50%;
+  top: 0;
+  @include transform(translateY(-50%) translateY(-10px) translateX(-50%));
+}
+
+.Tooltipped--right:after {
+  top: 50%;
+  right: 0;
+  @include transform(translateX(100%) translateX(10px) translateY(-50%));
+}
+
+.Tooltipped--left:after {
+  top: 50%;
+  left: 0;
+  @include transform(translateX(-100%) translateX(-10px) translateY(-50%));
+}
+
+/* Themes */
+
+.Tooltipped:after {
+  background-color: var(--c-tooltip-bg);
+  color: var(--c-tooltip-fg);
+}

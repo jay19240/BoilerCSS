@@ -1,0 +1,24 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Close
+/*---------------------------------------------------------------------------------------------*/
+
+.Close {
+  float: right;
+  font-size: var(--base-spacing-rem);
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  @include opacity(0.2);
+}
+.Close:hover,
+.Close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  @include opacity(0.5);
+}
+
+/* Themes */
+
+.Close {
+  color: var(--c-close);
+}

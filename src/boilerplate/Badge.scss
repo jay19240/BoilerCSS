@@ -1,0 +1,34 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Badge
+/*---------------------------------------------------------------------------------------------*/
+
+.Badge {
+  display: inline-block;
+  padding-left: 0.355em;
+  padding-right: 0.355em;
+  text-align: center;
+  vertical-align: baseline;
+  line-height: 2;
+  font-size: var(--half-spacing-rem);
+  min-width: var(--base-spacing-rem);
+  border-radius: calc(var(--base-border-radius) * 2);
+}
+
+/* Themes */
+
+.Badge {
+  background-color: var(--c-badge-bg);
+  color: var(--c-badge-fg);
+}
+
+@if $COLOR_VARIANTS_ENABLED {
+  .Badge--primary {
+    background-color: var(--c-badge-primary-bg);
+    color: var(--c-badge-primary-fg);
+  }
+
+  .Badge--secondary {
+    background-color: var(--c-badge-secondary-bg);
+    color: var(--c-badge-secondary-fg);
+  }
+}

@@ -1,0 +1,58 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Alert
+/*---------------------------------------------------------------------------------------------*/
+
+.Alert {
+  display: block;
+  padding: var(--half-spacing-rem);
+  padding-right: 35px;
+  text-align: center;
+  margin-bottom: var(--base-spacing-rem);
+}
+
+/* Modifiers */
+
+.Alert--closable .Close {
+  position: relative;
+  right: -20px;
+  color: inherit;
+}
+
+/* Themes */
+
+.Alert {
+  background-color: var(--c-alert-bg);
+  color: var(--c-alert-fg);
+}
+
+@if $COLOR_VARIANTS_ENABLED {
+  .Alert--primary {
+    background-color: var(--c-alert-primary-bg);
+    color: var(--c-alert-primary-fg);
+  }
+
+  .Alert--secondary {
+    background-color: var(--c-alert-secondary-bg);
+    color: var(--c-alert-secondary-fg);
+  }
+
+  .Alert--success {
+    background-color: var(--c-alert-success-bg);
+    color: var(--c-alert-success-fg);
+  }
+
+  .Alert--info {
+    background-color: var(--c-alert-info-bg);
+    color: var(--c-alert-info-fg);
+  }
+
+  .Alert--warning {
+    background-color: var(--c-alert-warning-bg);
+    color: var(--c-alert-warning-fg);
+  }
+
+  .Alert--danger {
+    background-color: var(--c-alert-danger-bg);
+    color: var(--c-alert-danger-fg);
+  }
+}

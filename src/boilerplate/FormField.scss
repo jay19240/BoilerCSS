@@ -1,0 +1,45 @@
+/*---------------------------------------------------------------------------------------------*/
+/* FormField
+/*---------------------------------------------------------------------------------------------*/
+
+.FormField {
+  display: block;
+  margin-bottom: var(--base-spacing-rem);
+}
+.FormField-label {
+  display: block;
+  margin-bottom:0.2em;
+}
+.FormField-hint {
+  display: block;
+  font-size:0.8em;
+}
+.FormField-error {
+  display: block;
+  margin-top: 5px;
+  font-weight: inherit;
+}
+
+/* Modifiers */
+
+.FormField--inline .FormCtrl,
+.FormField--inline .FormField-label {
+  display:inline-block;
+  margin-bottom: 0;
+  margin-right: 0.2em;
+  width: auto;
+}
+
+.FormField--required .FormField-label::after {
+  content: " *";
+}
+
+/* Themes */
+
+.FormField-hint {
+  color: var(--c-form-field-hint-fg);
+}
+
+.FormField-error {
+  color: var(--c-form-field-error-fg);
+}

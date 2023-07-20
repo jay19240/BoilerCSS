@@ -1,0 +1,51 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Table
+/*---------------------------------------------------------------------------------------------*/
+
+.Table {
+  display: table;
+}
+
+/* Modifiers */
+
+.Table--bordered th,
+.Table--bordered td {
+  border: 1px solid;
+}
+.Table--bordered th:empty,
+.Table--bordered td:empty {
+  border: none;
+}
+.Table--data {
+  font: 12px/1.5 sans-serif;
+}
+.Table--fixed {
+  table-layout: fixed;
+}
+.Table--fixed td p {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal !important;
+}
+
+/* Themes */
+
+.Table {
+  background-color: var(--c-table-bg);
+  color: var(--c-table-fg);
+}
+
+.Table--striped tbody tr:nth-of-type(odd) {
+  background-color: var(--c-table-striped-odd-bg);
+  color: var(--c-table-striped-odd-fg);
+}
+
+.Table-active,
+.Table--hover tbody tr:hover > td:not(:empty),
+.Table--hover tbody tr:hover > th:not(:empty) {
+  background-color: var(--c-table-hover-bg);
+  color: var(--c-table-hover-fg);
+}

@@ -1,0 +1,21 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Form
+/*---------------------------------------------------------------------------------------------*/
+
+.Form {
+  display: block;
+}
+
+/* Modifiers */
+
+.Form--inline {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.Form--inline .FormField {
+  margin-bottom: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}

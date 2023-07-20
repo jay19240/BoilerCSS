@@ -1,0 +1,54 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Label
+/*---------------------------------------------------------------------------------------------*/
+
+.Label {
+  display: inline-block;
+  min-width: 1.45em;
+  padding-left: 0.355em;
+  padding-right: 0.355em;
+  font-size: 0.75em;
+  line-height: 2em;
+  text-align: center;
+  vertical-align: baseline;
+  border-radius: var(--base-border-radius);
+}
+
+/* Themes */
+
+.Label {
+  background-color: var(--c-label-bg);
+  color: var(--c-label-fg);
+}
+
+@if $COLOR_VARIANTS_ENABLED {
+  .Label--primary {
+    background-color: var(--c-label-primary-bg);
+    color: var(--c-label-primary-fg);
+  }
+
+  .Label--secondary {
+    background-color: var(--c-label-secondary-bg);
+    color: var(--c-label-secondary-fg);
+  }
+
+  .Label--success {
+    background-color: var(--c-label-success-bg);
+    color: var(--c-label-success-fg);
+  }
+
+  .Label--info {
+    background-color: var(--c-label-info-bg);
+    color: var(--c-label-info-fg);
+  }
+
+  .Label--warning {
+    background-color: var(--c-label-warning-bg);
+    color: var(--c-label-warning-fg);
+  }
+
+  .Label--danger {
+    background-color: var(--c-label-danger-bg);
+    color: var(--c-label-danger-fg);
+  }
+}

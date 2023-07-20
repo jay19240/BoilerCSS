@@ -1,0 +1,31 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Toast
+/*---------------------------------------------------------------------------------------------*/
+
+.Toast {
+  display: block;
+  position: fixed;
+  top: 0;
+  font-size: var(--half-spacing-rem);
+  min-height: 2em;
+  min-width: 20em;
+  padding: 1em 1.5em;
+  margin: var(--half-spacing-rem);
+  opacity: 0;
+  cursor: default;
+  overflow: hidden;
+  @include transition(opacity 0.3s);
+}
+
+/* Modifiers */
+
+.Toast--open {
+  opacity: 1;
+}
+
+/* Themes */
+
+.Toast {
+  background-color: var(--c-toast-bg);
+  color: var(--c-toast-fg);
+}

@@ -1,0 +1,25 @@
+/*---------------------------------------------------------------------------------------------*/
+/* FormAddon
+/*---------------------------------------------------------------------------------------------*/
+
+.FormAddon {
+  display: flex;
+}
+.FormAddon .FormField {
+  flex: 1;
+}
+.FormAddon-item {
+  font: inherit;
+  font-weight: 400;
+}
+.FormAddon .FormField,
+.FormAddon-item {
+  padding: 0.5em 0.75em;
+}
+
+/* Themes */
+
+.FormAddon-item {
+  background-color: var(--c-form-addon-item-bg);
+  color: var(--c-form-addon-item-fg);
+}

@@ -1,0 +1,65 @@
+/*---------------------------------------------------------------------------------------------*/
+/* u-text
+/*---------------------------------------------------------------------------------------------*/
+
+.u-text--left {
+  text-align: left !important;
+}
+.u-text--right {
+  text-align: right !important;
+}
+.u-text--center {
+  text-align: center !important;
+}
+
+.u-text--anchored::after {
+  cursor: pointer;
+  content: "\00A0""\00A7" !important;
+  opacity: 0.2 !important;
+  filter: alpha(opacity=20) !important;
+}
+
+.u-text--ellipsis {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal !important;
+}
+
+.u-text--ellipsis-x {
+  overflow: hidden;
+  position: relative;
+  line-height: var(--base-spacing-rem);
+  max-height: var(--base-spacing-rem);
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+}
+.u-text--ellipsis-x::before {
+  content: "...";
+  position: absolute;
+  width: 1em;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
+.u-text--ellipsis-x::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
+}
+.u-text--ellipsis-x--2 {
+  max-height: calc(var(--base-spacing-rem) * 2);
+}
+.u-text--ellipsis-x--3 {
+  max-height: calc(var(--base-spacing-rem) * 3);
+}
+.u-text--ellipsis-x--4 {
+  max-height: calc(var(--base-spacing-rem) * 4);
+}

@@ -1,0 +1,199 @@
+/*---------------------------------------------------------------------------------------------*/
+/* Boilerplate variables
+/*---------------------------------------------------------------------------------------------*/
+
+:root {
+  --c-grey-50: #f8f9fa;
+  --c-grey-100: #dbdbdd;
+  --c-grey-200: #a19fa0;
+  --c-grey-300: #666666;
+  --c-grey-400: #3c3c3c;
+  --c-grey-500: #363636;
+  --c-grey-600: #0c0c0c;
+
+  --c-alert-bg: var(--c-grey-50);
+  --c-alert-fg: var(--c-grey-600);
+
+  --c-badge-bg: var(--c-grey-50);
+  --c-badge-fg: var(--c-grey-600);
+
+  --c-button-bg: var(--c-grey-50);
+  --c-button-fg: var(--c-grey-600);
+  --c-button-border: var(--c-grey-600);
+  --c-button-hover-bg: var(--c-grey-50);
+  --c-button-hover-fg: var(--c-grey-600);
+  --c-button-hover-border: var(--c-grey-50);
+
+  --c-dialog-bg: var(--c-grey-50);
+  --c-dialog-fg: var(--c-grey-600);
+  --c-dialog-border: var(--c-grey-600);
+  --c-dialog-header-bg: var(--c-grey-500);
+  --c-dialog-header-fg: var(--c-grey-50);
+
+  --c-dropdown-bg: var(--c-grey-50);
+  --c-dropdown-fg: var(--c-grey-600);
+  --c-dropdown-border: var(--c-grey-600);
+  --c-dropdown-item-hover-bg: var(--c-grey-600);
+  --c-dropdown-item-hover-fg: var(--c-grey-50);
+  --c-dropdown-separator: var(--c-grey-600);
+
+  --c-form-ctrl-border-radius: 0px;
+  --c-form-ctrl-bg: var(--c-grey-50);
+  --c-form-ctrl-fg: var(--c-grey-600);
+  --c-form-ctrl-border: ;
+  --c-form-ctrl-focus-bg: ;
+  --c-form-ctrl-focus-fg: ;
+  --c-form-ctrl-focus-border: ;
+
+  --c-form-addon-item-bg: var(--c-grey-200);
+  --c-form-addon-item-fg: var(--c-grey-600);
+
+  --c-form-field-hint-fg: var(--c-grey-200);
+  --c-form-field-error-fg: var(--c-grey-500);
+
+  --c-heading-bg: transparent;
+  --c-heading-fg: var(--c-grey-600);
+
+  --c-label-bg: var(--c-grey-50);
+  --c-label-fg: var(--c-grey-600);
+
+  --c-table-bg: var(--c-grey-50);
+  --c-table-fg: var(--c-grey-600);
+  --c-table-hover-bg: var(--c-grey-200);
+  --c-table-hover-fg: var(--c-grey-50);
+  --c-table-striped-odd-bg: var(--c-grey-100);
+  --c-table-striped-odd-fg: var(--c-grey-500);
+
+  --c-toast-bg: var(--c-grey-500);
+  --c-toast-fg: var(--c-grey-50);
+
+  --c-tooltip-bg: var(--c-grey-500);
+  --c-tooltip-fg: var(--c-grey-50);
+}
+
+@if $COLOR_VARIANTS_ENABLED {
+  :root {
+    --c-primary-bg: #ee09cf;
+    --c-primary-fg: #fff;
+    --c-secondary-bg: #364e61;
+    --c-secondary-fg: #fff;
+    --c-success-bg: #28a745;
+    --c-success-fg: #fff;
+    --c-info-bg: #17a2b8;
+    --c-info-fg: #fff;
+    --c-warning-bg: #ffc107;
+    --c-warning-fg: #fff;
+    --c-danger-bg: #dc3545;
+    --c-danger-fg: #fff;
+  
+    --c-alert-primary-bg: ;
+    --c-alert-primary-fg: ;
+    --c-alert-secondary-bg: ;
+    --c-alert-secondary-fg: ;
+    --c-alert-success-bg: ;
+    --c-alert-success-fg: ;
+    --c-alert-info-bg: ;
+    --c-alert-info-fg: ;
+    --c-alert-warning-bg: ;
+    --c-alert-warning-fg: ;
+    --c-alert-danger-bg: ;
+    --c-alert-danger-fg: ;
+
+    --c-badge-primary-bg: ;
+    --c-badge-primary-fg: ;
+    --c-badge-secondary-bg: ;
+    --c-badge-secondary-fg: ;
+
+    --c-button-primary-bg: ;
+    --c-button-primary-fg: ;
+    --c-button-primary-border: ;
+    --c-button-primary-hover-bg: ;
+    --c-button-primary-hover-fg: ;
+    --c-button-primary-hover-border: ;
+    --c-button-secondary-bg: ;
+    --c-button-secondary-fg: ;
+    --c-button-secondary-border: ;
+    --c-button-secondary-hover-bg: ;
+    --c-button-secondary-hover-fg: ;
+    --c-button-secondary-hover-border: ;
+    --c-button-success-bg: ;
+    --c-button-success-fg: ;
+    --c-button-success-border: ;
+    --c-button-success-hover-bg: ;
+    --c-button-success-hover-fg: ;
+    --c-button-success-hover-border: ;
+    --c-button-info-bg: ;
+    --c-button-info-fg: ;
+    --c-button-info-border: ;
+    --c-button-info-hover-bg: ;
+    --c-button-info-hover-fg: ;
+    --c-button-info-hover-border: ;
+    --c-button-warning-bg: ;
+    --c-button-warning-fg: ;
+    --c-button-warning-border: ;
+    --c-button-warning-hover-bg: ;
+    --c-button-warning-hover-fg: ;
+    --c-button-warning-hover-border: ;
+    --c-button-danger-bg: ;
+    --c-button-danger-fg: ;
+    --c-button-danger-border: ;
+    --c-button-danger-hover-bg: ;
+    --c-button-danger-hover-fg: ;
+    --c-button-danger-hover-border: ;
+
+    --c-dialog-success-bg: ;
+    --c-dialog-success-fg: ;
+    --c-dialog-success-border: ;
+    --c-dialog-success-header-bg: red;
+    --c-dialog-success-header-fg: #fff;
+    --c-dialog-info-bg: ;
+    --c-dialog-info-fg: ;
+    --c-dialog-info-border: ;
+    --c-dialog-info-header-bg: red;
+    --c-dialog-info-header-fg: #fff;
+    --c-dialog-warning-bg: ;
+    --c-dialog-warning-fg: ;
+    --c-dialog-warning-border: ;
+    --c-dialog-warning-header-bg: red;
+    --c-dialog-warning-header-fg: #fff;
+    --c-dialog-danger-bg: ;
+    --c-dialog-danger-fg: ;
+    --c-dialog-danger-border: ;
+    --c-dialog-danger-header-bg: red;
+    --c-dialog-danger-header-fg: #fff;
+
+    --c-form-ctrl-success-bg: ;
+    --c-form-ctrl-success-fg: ;
+    --c-form-ctrl-success-border: ;
+    --c-form-ctrl-success-focus-bg: ;
+    --c-form-ctrl-success-focus-fg: ;
+    --c-form-ctrl-success-focus-border: ;
+
+    --c-form-ctrl-warning-bg: ;
+    --c-form-ctrl-warning-fg: ;
+    --c-form-ctrl-warning-border: ;
+    --c-form-ctrl-warning-focus-bg: ;
+    --c-form-ctrl-warning-focus-fg: ;
+    --c-form-ctrl-warning-focus-border: ;
+
+    --c-form-ctrl-danger-bg: ;
+    --c-form-ctrl-danger-fg: ;
+    --c-form-ctrl-danger-border: ;
+    --c-form-ctrl-danger-focus-bg: ;
+    --c-form-ctrl-danger-focus-fg: ;
+    --c-form-ctrl-danger-focus-border: ;
+
+    --c-label-primary-bg: ;
+    --c-label-primary-fg: ;
+    --c-label-secondary-bg: ;
+    --c-label-secondary-fg: ;
+    --c-label-success-bg: ;
+    --c-label-success-fg: ;
+    --c-label-info-bg: ;
+    --c-label-info-fg: ;
+    --c-label-warning-bg: ;
+    --c-label-warning-fg: ;
+    --c-label-danger-bg: ;
+    --c-label-danger-fg: ;
+  }
+}
